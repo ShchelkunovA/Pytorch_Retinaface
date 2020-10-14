@@ -150,20 +150,6 @@ class Detector():
         dets = dets[detctions_threshed]
         landms = landms[detctions_threshed]
         _t['misc'].toc()
-        # # save image
-        # for b in dets_show:
-        #     if b[4] < 0.9:
-        #         continue
-        #     text = "{:.4f}".format(b[4])
-        #     b = list(map(int, b))
-        #     cv2.rectangle(img_raw, (b[0], b[1]), (b[2], b[3]), (0, 0, 255), 2)
-        #     cx = b[0]
-        #     cy = b[1] + 12
-        #     cv2.putText(img_raw, text, (cx, cy),
-        #                 cv2.FONT_HERSHEY_DUPLEX, 0.5, (255, 255, 255))
-        # save image
-        cv2.imshow("name", img_raw)
-        cv2.waitKey(1)
         return dets, probs, landms
 
 if __name__ == '__main__':
