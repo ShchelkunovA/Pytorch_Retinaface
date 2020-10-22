@@ -3,8 +3,7 @@ import torch
 import torch.backends.cudnn as cudnn
 import numpy as np
 import sys
-# print(os.path.dirname(__file__))
-# sys.path.append(os.path.dirname(__file__))
+
 from .data.config import cfg_mnet, cfg_re50
 from .layers.functions.prior_box import PriorBox
 from .utils.nms.py_cpu_nms import py_cpu_nms
